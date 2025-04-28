@@ -13,7 +13,7 @@ This project is a simple client-server chat system using Winsock on Windows. Des
 1. Open Terminal (or Command Prompt).
 2. Compile the server:
     ```bash
-    g++ mainServer.cpp C_connectionManager.cpp C_registrationModule.cpp S_clientRegistry.cpp S_requestProcessor.cpp -o server.exe -lws2_32
+    g++ mainServer.cpp S_connectionHandler.cpp S_clientRegistry.cpp S_requestProcessor.cpp -o server.exe -lws2_32
     ```
 3. Compile the client:
     ```bash
@@ -43,3 +43,6 @@ This project is a simple client-server chat system using Winsock on Windows. Des
 - Client sends a chat request to another username.
 - If recipient responds `ok`, chat starts.
 - If `notnow`, chat request is declined.
+
+## Notes
+- This project currently runs on **Windows** only (because it uses Winsock2).
